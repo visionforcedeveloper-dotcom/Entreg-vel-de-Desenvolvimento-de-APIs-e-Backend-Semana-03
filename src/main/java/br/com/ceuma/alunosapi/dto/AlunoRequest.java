@@ -1,27 +1,15 @@
 package br.com.ceuma.alunosapi.dto;
 
-/**
- * DTO de ENTRADA (Request).
- *
- * Representa os dados que o cliente envia no corpo (body) da requisição
- * ao criar ou atualizar um aluno. Separar da Entity garante que campos
- * internos (como o ID gerado pelo banco) nunca sejam recebidos pelo cliente.
- */
+// dados que chegam na requisicao (POST e PUT)
+// nao tem id porque quem gera o id e o banco
 public class AlunoRequest {
 
     private String nome;
     private String email;
     private String curso;
 
-    // -------------------------------------------------------
-    // Construtor padrão necessário para desserialização JSON
-    // -------------------------------------------------------
     public AlunoRequest() {
     }
-
-    // -------------------------------------------------------
-    // Getters e Setters
-    // -------------------------------------------------------
 
     public String getNome() {
         return nome;

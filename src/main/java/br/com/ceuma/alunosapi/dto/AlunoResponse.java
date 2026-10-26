@@ -1,12 +1,7 @@
 package br.com.ceuma.alunosapi.dto;
 
-/**
- * DTO de SAÍDA (Response).
- *
- * Representa os dados que a API devolve ao cliente após uma operação.
- * Neste caso expõe o ID (gerado pelo banco) junto com os demais campos,
- * mas nunca expõe dados sensíveis que porventura existam na Entity.
- */
+// dados que a API devolve para quem fez a requisicao
+// aqui ja tem o id porque o banco ja gerou
 public class AlunoResponse {
 
     private Long id;
@@ -14,15 +9,8 @@ public class AlunoResponse {
     private String email;
     private String curso;
 
-    // -------------------------------------------------------
-    // Construtor padrão necessário para serialização JSON
-    // -------------------------------------------------------
     public AlunoResponse() {
     }
-
-    // -------------------------------------------------------
-    // Getters e Setters
-    // -------------------------------------------------------
 
     public Long getId() {
         return id;

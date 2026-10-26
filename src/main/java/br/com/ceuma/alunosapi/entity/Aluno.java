@@ -7,11 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-/**
- * Entity que representa a tabela 'alunos' no banco de dados.
- * Esta classe NÃO deve ser exposta diretamente pela API;
- * para isso utilizamos os DTOs AlunoRequest e AlunoResponse.
- */
+// classe que representa a tabela alunos no banco
 @Entity
 @Table(name = "alunos")
 public class Aluno {
@@ -29,15 +25,8 @@ public class Aluno {
     @Column(nullable = false)
     private String curso;
 
-    // -------------------------------------------------------
-    // Construtor padrão exigido pelo JPA
-    // -------------------------------------------------------
     public Aluno() {
     }
-
-    // -------------------------------------------------------
-    // Getters e Setters
-    // -------------------------------------------------------
 
     public Long getId() {
         return id;
